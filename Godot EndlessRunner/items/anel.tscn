@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://deefbk2dhfnuy"]
+
+[ext_resource type="Texture2D" uid="uid://cvll8jbqxd5kv" path="res://img/anelSonic.png" id="1_kihba"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x1vva"]
+radius = 362.643
+
+[node name="anel" type="CharacterBody2D" groups=["ring"]]
+position = Vector2(62, 231)
+rotation = 3.14159
+scale = Vector2(0.027734, 0.025821)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1009.59, -426.009)
+scale = Vector2(-0.756664, 1.4129)
+shape = SubResource("CircleShape2D_x1vva")
+
+[node name="item" type="Sprite2D" parent="."]
+position = Vector2(1009.59, -464.738)
+texture = ExtResource("1_kihba")

@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwcc3srirnbk5"]
+
+[ext_resource type="Script" path="res://screens/start.gd" id="1_2ge3o"]
+[ext_resource type="Texture2D" uid="uid://b54ldcq1o7mgk" path="res://img/backgrounds/parallax/background.png" id="1_wvaf6"]
+[ext_resource type="Texture2D" uid="uid://b7xmwx2utktjv" path="res://img/backgrounds/parallax/clouds2.png" id="2_oa26o"]
+[ext_resource type="Texture2D" uid="uid://diiy6axif7oqs" path="res://img/backgrounds/parallax/parallax-mountain-foreground-trees.png" id="2_s4q0q"]
+[ext_resource type="Texture2D" uid="uid://cxi5xfdhtyg3a" path="res://img/backgrounds/parallax/clouds.png" id="3_el0ek"]
+[ext_resource type="Texture2D" uid="uid://dqwec7mqhwfiu" path="res://img/backgrounds/parallax/parallax-mountain-mountains.png" id="3_er547"]
+[ext_resource type="Texture2D" uid="uid://o1gfmopsm5nl" path="res://img/backgrounds/parallax/parallax-mountain-montain-far.png" id="3_fb7lc"]
+[ext_resource type="Texture2D" uid="uid://bhuednt50djac" path="res://img/backgrounds/parallax/parallax-mountain-trees.png" id="4_np1qw"]
+[ext_resource type="FontFile" uid="uid://d1igmu8sbx8od" path="res://fonts/Qumpellkano12-A6D2.otf" id="9_ursln"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ge3o")
+metadata/_edit_horizontal_guides_ = [648.0]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.3484, 0.956437)
+anchor_mode = 0
+zoom = Vector2(0.5, 0.49)
+limit_left = 0
+limit_top = 0
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(581.5, 329)
+scale = Vector2(4.23897, 4.05)
+texture = ExtResource("1_wvaf6")
+
+[node name="Clouds2" type="Sprite2D" parent="."]
+position = Vector2(540, 403)
+scale = Vector2(2.4375, 4.5625)
+texture = ExtResource("2_oa26o")
+
+[node name="Clouds" type="Sprite2D" parent="."]
+position = Vector2(568.5, 82.375)
+scale = Vector2(4.44141, 4.13462)
+texture = ExtResource("3_el0ek")
+
+[node name="Parallax-mountain-montain-far" type="Sprite2D" parent="."]
+position = Vector2(772.5, 394.5)
+scale = Vector2(2.26838, 2.03125)
+texture = ExtResource("3_fb7lc")
+
+[node name="mountains" type="Sprite2D" parent="."]
+position = Vector2(576, 478)
+scale = Vector2(2.11397, 2.1625)
+texture = ExtResource("3_er547")
+
+[node name="mountain-trees" type="Sprite2D" parent="."]
+position = Vector2(577, 445)
+scale = Vector2(2.11765, 2.3875)
+texture = ExtResource("4_np1qw")
+
+[node name="mountain-trees2" type="Sprite2D" parent="."]
+position = Vector2(1726, 445)
+scale = Vector2(2.118, 2.388)
+texture = ExtResource("4_np1qw")
+
+[node name="mountain-foreground-trees" type="Sprite2D" parent="."]
+position = Vector2(578.5, 445)
+scale = Vector2(2.14522, 2.10625)
+texture = ExtResource("2_s4q0q")
+
+[node name="mountain-foreground-trees2" type="Sprite2D" parent="."]
+position = Vector2(1720, 445)
+scale = Vector2(2.14522, 2.10625)
+texture = ExtResource("2_s4q0q")
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 343.0
+offset_right = 719.0
+offset_bottom = 423.0
+theme_override_fonts/font = ExtResource("9_ursln")
+theme_override_font_sizes/font_size = 40
+text = "Começar"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 449.0
+offset_right = 724.0
+offset_bottom = 529.0
+theme_override_fonts/font = ExtResource("9_ursln")
+theme_override_font_sizes/font_size = 40
+text = "Sair"
+
+[node name="title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 39.0
+offset_right = 1151.0
+offset_bottom = 366.0
+theme_override_colors/default_color = Color(0.960784, 0, 0.160784, 1)
+theme_override_colors/font_shadow_color = Color(0.784314, 0.137255, 0.0941176, 1)
+theme_override_font_sizes/normal_font_size = 90
+bbcode_enabled = true
+text = "[center] Chifre
+queimado [/center]
+"
+
+[connection signal="button_down" from="start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="exit" to="." method="_on_exit_button_down"]

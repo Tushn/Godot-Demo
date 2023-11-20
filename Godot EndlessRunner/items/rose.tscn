@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcblo2bl01ld1"]
+
+[ext_resource type="Texture2D" uid="uid://c8scko88j7cx4" path="res://img/rose.png" id="1_trkba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsnun"]
+size = Vector2(84, 114)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-3, 3)
+shape = SubResource("RectangleShape2D_nsnun")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, 2)
+scale = Vector2(0.0897321, 0.0897321)
+texture = ExtResource("1_trkba")
